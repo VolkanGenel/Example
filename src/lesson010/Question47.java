@@ -114,9 +114,6 @@ public class Question47 {
 			System.out.println(i); 
 			System.out.println((sayi1*sayi2)/i);
 			break;}
-		
-		
-		
 	}
 	
 	public static void uygulama() {
