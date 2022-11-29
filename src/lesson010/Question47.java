@@ -87,7 +87,7 @@ public class Question47 {
 		
 		return cikarma;
 	}
-	public static int carpim() {
+	public static int carpma() {
 		String sayi4=null;
 		int carpim=1;
 		Scanner sc = new Scanner(System.in);
@@ -102,6 +102,30 @@ public class Question47 {
 			carpim *= Integer.parseInt(sayi4);
 		}while (!sayi4.equals("="));
 		return carpim;
+	}
+	
+	public static int bolme() {
+		Scanner sc =new Scanner(System.in);
+		String sayi5;
+		int bolme=1;
+		int sayac=1;
+		do {
+		System.out.println("Lütfen bir sayı giriniz,eğer sonuç çıksın isterseniz '=' giriniz. ");
+		sayi5 =sc.nextLine();
+		
+		if (!sayi5.equals("=")) {
+			if (sayac==1)
+			bolme = Integer.parseInt(sayi5);
+			else { if (sayi5.equals("0")) {
+				System.out.println("Lütfen başka bir değer giriniz");
+				sayac--; }
+				else
+				bolme /= Integer.parseInt(sayi5);}
+			sayac++;
+		}
+		}
+		while(!sayi5.equals("="));
+		return bolme;
 	}
 	
 	public static void ebobEkok() {
@@ -136,11 +160,15 @@ public class Question47 {
 			System.out.println(cikarma());
 			break;	
 		case 3:
-			System.out.println(carpim());
+			System.out.println(carpma());
+			break;
+		case 4:
+			System.out.println(bolme());
 			break;
 		case 5:
 			ebobEkok();
 		default:
+			System.err.println("Yanlış Seçim Yaptınız!");
 			break;
 		}
 		
